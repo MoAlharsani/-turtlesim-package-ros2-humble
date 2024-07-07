@@ -19,23 +19,18 @@ is a node that make the turtle goes to a specifc point in turtuel 2D plane,
 first install the package in your system, then following this commands
 - Create workspace
   ```
-  mkdir -p ~/ros2_ws/src
-  cd ~/ros2_ws/src
-  ```
-- Clone the packege into your src file
-  ```
-  # Clone the repository with depth 1 to get only the latest commit
-  git clone --depth 1 https://github.com/MoAlharsani/turtlesim-package-ros2-humble.git
-  
-  # Move the contents of the 'artist_turtle_controller' directory to your current directory
-  mv turtlesim-package-ros2-humble/artist_turtle_controller/* .
-  
-  # Clean up: Remove the temporary directory
-  rm -rf turtlesim-package-ros2-humble
+  mkdir -p ~/artist_turtle_ros2_ws/src
+  cd ~/artist_turtle_ros2_ws/src
+  ros2 pkg create artist_turtle_controller --build-type ament_python --dependencies rclpy math sys geometry_msg 
+  cd artist_turtle_controller
+  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/go_to_coordinate.py
+  rm -rf setup.py
+  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/setup.py
+  chmod +x go_to_coordinate.py
   ```
 - Build the workspace
   ```
-  cd ~/ros2_ws
+  cd ~/artist_turtle_ros2_ws
   colcon build
   ```
 - In another terminal run the turtlesim_node
@@ -44,7 +39,7 @@ first install the package in your system, then following this commands
   ```
 - In another terminal, source and run the package. Where $(x, y) = (1.0, 7.0)$
   ```
-  source ~/ros2_ws/install/setup.sh
+  source ~/artist_turtle_ros2_ws/install/setup.sh
   ros2 run artist_turtle_controller go_to_coordinate 1.0 7.0 
   ```
   
