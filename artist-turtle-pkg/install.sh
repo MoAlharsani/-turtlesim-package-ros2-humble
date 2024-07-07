@@ -1,11 +1,5 @@
-
 #!/bin/bash
 
-# Make sure script is being run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Error: This script must be run as root. Use 'sudo ./install_artist_turtle_controller.sh'."
-    exit 1
-fi
 
 # Create ROS 2 workspace and navigate to src directory
 mkdir -p ~/artist_turtle_ros2_ws/src
