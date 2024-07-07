@@ -22,7 +22,7 @@ first install the package in your system, then following this commands
   mkdir -p ~/artist_turtle_ros2_ws/src
   cd ~/artist_turtle_ros2_ws/src
   ros2 pkg create artist_turtle_controller --build-type ament_python --dependencies rclpy math sys geometry_msg 
-  cd artist_turtle_controller
+  cd artist_turtle_controller/artist_turtle_controller/
   curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/go_to_coordinate.py
   rm -rf setup.py
   curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/setup.py
