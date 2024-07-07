@@ -13,19 +13,30 @@ In this repo, I will build different controller for the Turtlesim package in the
 
 
 
-## GoToCoordinate.py 
+## Package Installation
 is a node that make the turtle goes to a specifc point in turtuel 2D plane,
 
+### One command installation 
+- Run these command or follow the specific step by step command
+  ```
+  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/artist-turtle-pkg/install.sh
+  ./install.sh
+  ```
+  
+
+
+### Step By Step Installation
 first install the package in your system, then following this commands
 - Create workspace
   ```
   mkdir -p ~/artist_turtle_ros2_ws/src
   cd ~/artist_turtle_ros2_ws/src
   ros2 pkg create artist_turtle_controller --build-type ament_python --dependencies rclpy math sys geometry_msg 
-  cd artist_turtle_controller/artist_turtle_controller/
-  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/go_to_coordinate.py
+  cd artist_turtle_controller/
   rm -rf setup.py
-  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/go-to-coordinate/setup.py
+  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/artist-turtle-pkg/setup.py
+  cd artist_turtle_controller/
+  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/artist-turtle-pkg/go_to_coordinate.py
   chmod +x go_to_coordinate.py
   ```
 - Build the workspace
@@ -42,4 +53,4 @@ first install the package in your system, then following this commands
   source ~/artist_turtle_ros2_ws/install/setup.sh
   ros2 run artist_turtle_controller go_to_coordinate 1.0 7.0 
   ```
-  
+
