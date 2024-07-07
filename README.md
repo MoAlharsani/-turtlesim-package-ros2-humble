@@ -1,4 +1,4 @@
-# turtlesim-package-ros2-humble
+# artist-turtle-pkg-ros2-humble
 This repository provides controllers for the Turtlesim package in ROS 2 Humble. These controllers enable the turtle to perform tasks such as navigating to specific points and drawing predefined shapes on the 2D plane, serving as practical examples for learning ROS 2 concepts and robotics programming.
 
 ### To-Do
