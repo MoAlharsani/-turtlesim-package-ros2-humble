@@ -49,8 +49,8 @@ Here is how to install the package
   ros2 run artist_turtle_controller go_to_coordinate 1.0 7.0 
   ```
 
-![gif-ezgif com-video-to-gif-converter](https://github.com/MoAlharsani/turtlesim-package-ros2-humble/assets/86081496/be54b9cc-352a-4b72-b185-5bd64929c1ec)
+<div align="center">
+  <img src="https://github.com/MoAlharsani/turtlesim-package-ros2-humble/assets/86081496/be54b9cc-352a-4b72-b185-5bd64929c1ec" alt="Turtlesim Gif" style="width: 800px; height: auto;">
+</div>
 
-### Docker Container installation 
-- In the Future
 
