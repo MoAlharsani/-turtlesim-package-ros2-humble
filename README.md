@@ -1,28 +1,23 @@
 # turtlesim-package-ros2-humble
-In this repo, I will build different controller for the Turtlesim package in the ROS2 Humble distro. These controllers hopefully will help learning and understanding ROS2 Concepts. 
+This repository provides controllers for the Turtlesim package in ROS 2 Humble. These controllers enable the turtle to perform tasks such as navigating to specific points and drawing predefined shapes on the 2D plane, serving as practical examples for learning ROS 2 concepts and robotics programming.
 
 ### To-Do
 
 - [ ] Make the turtle draw a shape where the shape is given by a set of points. ${\{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\}}$
+- [ ] Installing the package using Docker Containers
+
 
 
 ### Completed
 
 - [x] Make the turtle navigate to a given (x,y) point.
   - Implemented at the `GoToCoordinate` class
+- [x] Write the shell installation process
 
 
 
 ## Package Installation
-is a node that make the turtle goes to a specifc point in turtuel 2D plane,
-
-### One command installation 
-- Run these command or follow the specific step by step command
-  ```
-  curl -O https://raw.githubusercontent.com/MoAlharsani/turtlesim-package-ros2-humble/main/artist-turtle-pkg/install.sh
-  ./install.sh
-  ```
-  
+Here is how to install the package
 
 
 ### Step By Step Installation
@@ -53,4 +48,9 @@ first install the package in your system, then following this commands
   source ~/artist_turtle_ros2_ws/install/setup.sh
   ros2 run artist_turtle_controller go_to_coordinate 1.0 7.0 
   ```
+
+
+### Docker Container installation 
+- In the Future
+
 
